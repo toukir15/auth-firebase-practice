@@ -16,6 +16,9 @@ export default function Header() {
         <Link className="mr-4" to="/">
           Home
         </Link>
+        <Link className="mr-4" to="/order">
+          Order
+        </Link>
         <Link className="mr-4" to="/login">
           Login
         </Link>

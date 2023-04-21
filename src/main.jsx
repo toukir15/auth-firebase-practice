@@ -7,6 +7,8 @@ import Home from "./Home/Home";
 import Login from "./Login/Login";
 import Resister from "./Resister/Resister";
 import AuthProviders from "./providers/AuthProviders";
+import Order from "./Order/Order";
+import PrivateRoute from "../public/routes/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/order",
+        element: (
+          <PrivateRoute>
+            <Order />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/resister",
